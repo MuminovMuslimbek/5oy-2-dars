@@ -13,11 +13,11 @@
     <header>
         <div class="header__container container">
             <a href="index.html"><img src="images/icon_logo.png" alt="img" width="65px"></a>
-            <form action="" method="post">
+            <form id="filterForm">
                 <label for="filter__input1"></label>
-                <input id="filter__input1" type="number" required placeholder="Min number">
+                <input id="filter__input1" type="number" required placeholder="Min card number">
                 <label for="filter__input2"></label>
-                <input id="filter__input2" type="number" required placeholder="Max number">
+                <input id="filter__input2" type="number" required placeholder="Max card number">
                 <button type="submit">Filter<img src="images/filter icon.png" alt="icon" width="25px"></button>
             </form>
         </div>
@@ -31,27 +31,177 @@
                 <div class="card">
                     <h3><span style="color: #fff;"> ### Masala 1: `map` va `filter` metodlari bilan alifbo tartibini o'zgartirish:</span><br> Berilgan massivdagi so'zlardan uzunligi 5 ta belgidan kam bo'lganlarni olib tashlab, qolgan so'zlarning har birining
                         bosh harfini katta harfga aylantiruvchi funksiyani yozing.</h3>
-                    <input id="inputNum1-easy" type="number" required placeholder="Sonni kiriting:">
+                    <input id="inputNum1" type="text" required placeholder="Qiymatni vergul bilan kiriting:">
                     <div class="result_text">
                         <p>Result:</p>
-                        <button id="num1-easy">Ko`rish</button>
+                        <button id="num1">Ko`rish</button>
                     </div>
                     <div class="result">
-                        <textarea name="number" id="result1Easy" readonly></textarea>
+                        <textarea name="number" id="result1" readonly></textarea>
                         <button id="clear1">Clear</button>
                     </div>
                 </div>
                 <div class="card">
-                    <h3><span style="color: #fff;"> 2-oson.</span><br> Funksiya yozing, bu funksiya berilgan ikkita sonning yig'indisini qaytarsin.</h3>
-                    <input id="inputNum2-easy1" type="number" required placeholder="Birinchi sonni kiriting:">
-                    <input id="inputNum2-easy2" type="number" required placeholder="Ikkinchi sonni kiriting:">
+                    <h3><span style="color: #fff;"> ### Masala 2: `find` va `map` metodlari bilan talabalarni topish</span><br>Talabalarning ism va yoshlarini o'z ichiga olgan massivdan 20 yoshdan katta bo'lgan birinchi talabani topuvchi va uning ismini katta
+                        harf bilan qaytaruvchi funksiyani yozing.</h3>
+                    <input id="inputNum2num1" type="text" required placeholder="Talabalarning ismini vergul bilan kiriting:">
+                    <input id="inputNum2num2" type="text" required placeholder="Talabalarning yoshini vergul bilan kiriting:">
                     <div class="result_text">
                         <p>Result:</p>
-                        <button id="num2-easy">Ko`rish</button>
+                        <button id="num2">Ko`rish</button>
                     </div>
                     <div class="result">
-                        <textarea name="number" id="result2Easy" readonly></textarea>
+                        <textarea name="number" id="result2" readonly></textarea>
                         <button id="clear2">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;"> ### Masala 3: `filter` va `reduce` metodlari bilan umumiy summani hisoblash:</span><br> Berilgan mahsulotlarning narxlari massivini oladigan va faqat 10000 dan katta narxlarga ega mahsulotlarning umumiy
+                        narxini hisoblaydigan funksiyani yozing.
+                    </h3>
+                    <input id="inputNum3" type="text" required placeholder="Narxlarni vergul bilan kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num3">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result3" readonly></textarea>
+                        <button id="clear3">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;"> ### Masala 4: `every` va `some` metodlari bilan aniq shartlarni tekshirish:</span><br> Berilgan massivdagi sonlarning hammasi musbat ekanligini tekshiring. Agar shunday bo'lsa, "Barcha sonlar musbat"
+                        degan xabarni, aks holda, "Musbat bo'lmagan sonlar bor" degan xabarni chiqaruvchi funksiyani yozing. Shu bilan birga, agar kamida bitta son 100 dan katta bo'lsa, "Katta son bor" degan xabarni chiqaruvchi shartni ham qo'shing.
+                    </h3>
+                    <input id="inputNum4" type="text" required placeholder="Sonlarni vergul bilan kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num4">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result4" readonly></textarea>
+                        <button id="clear4">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 5: `forEach` va `map` metodlari bilan massiv elementlarini transformatsiya qilish:</span><br> Berilgan massivdagi har bir elementni kvadratini hisoblab, bu qiymatlarni yangi massivga qo'shish
+                        uchun funksiyani yozing. So'ngra, yangi massivdagi elementlarni konsolga chiqaruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum5" type="text" required placeholder="Sonlarni vergul bilan kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num5">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result5" readonly></textarea>
+                        <button id="clear5">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 6: `map`, `filter`, va `reduce` metodlarini birgalikda ishlatish:</span><br> Berilgan xodimlarning maoshlarini o'z ichiga olgan massivdan faqat 2000 dan kam bo'lmagan maoshlarni tanlab, ularni
+                        10% ko'paytirib, barcha xodimlarning yangi umumiy maoshini hisoblaydigan funksiyani yozing.
+                    </h3>
+                    <input id="inputNum6" type="text" required placeholder="Maoshlarni vergul bilan kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num6">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result6" readonly></textarea>
+                        <button id="clear6">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 7: `find`, `filter`, va `map` metodlari bilan talabalar ma'lumotlarini qayta ishlash:</span><br> Berilgan talabalar ma'lumotlar massividan (ism, yosh, baho) kamida 80 ball olgan birinchi talabaning
+                        ismi va yoshini toping, so'ngra barcha 80 dan yuqori ball olgan talabalarni toping va ularning ismlarini katta harf bilan qaytaruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum7" type="text" required placeholder="Talabalar ma'lumotlarini kiriting (ism, yosh, baho):">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num7">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result7" readonly></textarea>
+                        <button id="clear7">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <h2>Yozuvlarga oid.</h2>
+            <div class="card_main">
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 1: `toUpperCase` metodi bilan harflarni katta harfga aylantirish:</span><br> Berilgan stringdagi barcha harflarni katta harfga aylantiruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum8" type="text" required placeholder="Matnni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num8">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result8" readonly></textarea>
+                        <button id="clear8">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 2: `includes` metodi bilan substringni tekshirish:</span><br> Berilgan stringda ma'lum bir substring mavjudligini tekshiruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum9String" type="text" required placeholder="Matnni kiriting:">
+                    <input id="inputNum9Substring" type="text" required placeholder="Qidirilayotgan substringni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num9">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result9" readonly></textarea>
+                        <button id="clear9">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 3: `replace` metodi bilan substringni almashtirish:</span><br> Berilgan stringdagi barcha "JavaScript" so'zlarini "JS" so'ziga almashtiruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum10" type="text" required placeholder="Matnni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num10">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result10" readonly></textarea>
+                        <button id="clear10">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 4: `split` va `join` metodlari bilan so'zlarni teskari tartibda qaytarish:</span><br> Berilgan stringni so'zlar bo'yicha teskari tartibda qaytaruvchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum11" type="text" required placeholder="Matnni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num11">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result11" readonly></textarea>
+                        <button id="clear11">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>
+                        <span style="color: #fff;">### Masala 5: `trim` metodi bilan bo'sh joylarni olib tashlash:</span><br> Berilgan stringning boshida va oxirida bo'sh joylarni olib tashlovchi funksiyani yozing.
+                    </h3>
+                    <input id="inputNum12" type="text" required placeholder="Matnni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num12">Ko'rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result12" readonly></textarea>
+                        <button id="clear12">Clear</button>
                     </div>
                 </div>
             </div>
