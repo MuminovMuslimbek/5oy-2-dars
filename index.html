@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon_logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FN29 5-oy 2-dars vazifalari.</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__container container">
+            <a href="index.html"><img src="images/icon_logo.png" alt="img" width="65px"></a>
+            <form action="" method="post">
+                <label for="filter__input1"></label>
+                <input id="filter__input1" type="number" required placeholder="Min number">
+                <label for="filter__input2"></label>
+                <input id="filter__input2" type="number" required placeholder="Max number">
+                <button type="submit">Filter<img src="images/filter icon.png" alt="icon" width="25px"></button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="main__container container">
+            <h1>Assalomu alaykum!</h1>
+            <h2>Masalalar</h2>
+            <h2>Massivlarga oid:</h2>
+            <div class="card_main">
+                <div class="card">
+                    <h3><span style="color: #fff;"> ### Masala 1: `map` va `filter` metodlari bilan alifbo tartibini o'zgartirish:</span><br> Berilgan massivdagi so'zlardan uzunligi 5 ta belgidan kam bo'lganlarni olib tashlab, qolgan so'zlarning har birining
+                        bosh harfini katta harfga aylantiruvchi funksiyani yozing.</h3>
+                    <input id="inputNum1-easy" type="number" required placeholder="Sonni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num1-easy">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result1Easy" readonly></textarea>
+                        <button id="clear1">Clear</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3><span style="color: #fff;"> 2-oson.</span><br> Funksiya yozing, bu funksiya berilgan ikkita sonning yig'indisini qaytarsin.</h3>
+                    <input id="inputNum2-easy1" type="number" required placeholder="Birinchi sonni kiriting:">
+                    <input id="inputNum2-easy2" type="number" required placeholder="Ikkinchi sonni kiriting:">
+                    <div class="result_text">
+                        <p>Result:</p>
+                        <button id="num2-easy">Ko`rish</button>
+                    </div>
+                    <div class="result">
+                        <textarea name="number" id="result2Easy" readonly></textarea>
+                        <button id="clear2">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
