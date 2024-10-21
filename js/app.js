@@ -1,3 +1,33 @@
+// Filter:
+const FilterInput1 = document.getElementById("filter__input1");
+const FilterInput2 = document.getElementById("filter__input2");
+const FilterBtn = document.getElementById("filter__btn");
+const cards = document.querySelectorAll(".card");
+
+function FilterResult() {
+    const minVal = parseInt(FilterInput1.value);
+    const maxVal = parseInt(FilterInput2.value);
+    const filterText = FilterInput1.value.toLowerCase();
+    cards.forEach(card => {
+        const spanText = card.querySelector('span').textContent;
+        const h3Text = card.querySelector('h3').textContent.toLowerCase();
+        const cardNumber = parseInt(spanText.match(/\d+/));
+
+        const numberInRange = (!isNaN(minVal) && !isNaN(maxVal)) ? (cardNumber >= minVal && cardNumber <= maxVal) : true;
+        const textMatches = h3Text.includes(filterText);
+
+        if ((numberInRange || textMatches) && filterText) {
+            card.style.display = "flex";
+        } else if (!filterText) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+FilterBtn.addEventListener("click", FilterResult);
+
 // Massivlarga oid:
 // N1:
 function resultNum1() {
