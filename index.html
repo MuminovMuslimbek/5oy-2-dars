@@ -15,9 +15,9 @@
             <a href="index.html"><img src="images/icon_logo.png" alt="img" width="65px"></a>
             <form id="filterForm">
                 <label for="filter__input1"></label>
-                <input id="filter__input1" type="text" required placeholder="Min card number">
+                <input id="filter__input1" type="number" required placeholder="Min card number">
                 <label for="filter__input2"></label>
-                <input id="filter__input2" type="text" required placeholder="Max card number">
+                <input id="filter__input2" type="number" required placeholder="Max card number">
                 <button id="filter__btn" type="submit">Filter<img src="images/filter icon.png" alt="icon" width="25px"></button>
             </form>
         </div>
@@ -27,6 +27,8 @@
             <h1>Assalomu alaykum!</h1>
             <h2>Masalalar</h2>
             <h2>Massivlarga oid:</h2>
+            <h2 id="TitleNone" style="display: none;">Filtered cards:</h2>
+            <h2 id="titleEror" style="display: none;">Eror 404</h2>
             <div class="card_main">
                 <div class="card">
                     <h3><span style="color: #fff;"> ### Masala 1: `map` va `filter` metodlari bilan alifbo tartibini o'zgartirish:</span><br> Berilgan massivdagi so'zlardan uzunligi 5 ta belgidan kam bo'lganlarni olib tashlab, qolgan so'zlarning har birining
@@ -135,7 +137,7 @@
             <div class="card_main">
                 <div class="card">
                     <h3>
-                        <span style="color: #fff;">### Masala 1: `toUpperCase` metodi bilan harflarni katta harfga aylantirish:</span><br> Berilgan stringdagi barcha harflarni katta harfga aylantiruvchi funksiyani yozing.
+                        <span style="color: #fff;">### Masala 8: `toUpperCase` metodi bilan harflarni katta harfga aylantirish:</span><br> Berilgan stringdagi barcha harflarni katta harfga aylantiruvchi funksiyani yozing.
                     </h3>
                     <input id="inputNum8" type="text" required placeholder="Matnni kiriting:">
                     <div class="result_text">
@@ -149,7 +151,7 @@
                 </div>
                 <div class="card">
                     <h3>
-                        <span style="color: #fff;">### Masala 2: `includes` metodi bilan substringni tekshirish:</span><br> Berilgan stringda ma'lum bir substring mavjudligini tekshiruvchi funksiyani yozing.
+                        <span style="color: #fff;">### Masala 9: `includes` metodi bilan substringni tekshirish:</span><br> Berilgan stringda ma'lum bir substring mavjudligini tekshiruvchi funksiyani yozing.
                     </h3>
                     <input id="inputNum9String" type="text" required placeholder="Matnni kiriting:">
                     <input id="inputNum9Substring" type="text" required placeholder="Qidirilayotgan substringni kiriting:">
@@ -164,7 +166,7 @@
                 </div>
                 <div class="card">
                     <h3>
-                        <span style="color: #fff;">### Masala 3: `replace` metodi bilan substringni almashtirish:</span><br> Berilgan stringdagi barcha "JavaScript" so'zlarini "JS" so'ziga almashtiruvchi funksiyani yozing.
+                        <span style="color: #fff;">### Masala 10: `replace` metodi bilan substringni almashtirish:</span><br> Berilgan stringdagi barcha "JavaScript" so'zlarini "JS" so'ziga almashtiruvchi funksiyani yozing.
                     </h3>
                     <input id="inputNum10" type="text" required placeholder="Matnni kiriting:">
                     <div class="result_text">
@@ -178,7 +180,7 @@
                 </div>
                 <div class="card">
                     <h3>
-                        <span style="color: #fff;">### Masala 4: `split` va `join` metodlari bilan so'zlarni teskari tartibda qaytarish:</span><br> Berilgan stringni so'zlar bo'yicha teskari tartibda qaytaruvchi funksiyani yozing.
+                        <span style="color: #fff;">### Masala 11: `split` va `join` metodlari bilan so'zlarni teskari tartibda qaytarish:</span><br> Berilgan stringni so'zlar bo'yicha teskari tartibda qaytaruvchi funksiyani yozing.
                     </h3>
                     <input id="inputNum11" type="text" required placeholder="Matnni kiriting:">
                     <div class="result_text">
@@ -192,7 +194,7 @@
                 </div>
                 <div class="card">
                     <h3>
-                        <span style="color: #fff;">### Masala 5: `trim` metodi bilan bo'sh joylarni olib tashlash:</span><br> Berilgan stringning boshida va oxirida bo'sh joylarni olib tashlovchi funksiyani yozing.
+                        <span style="color: #fff;">### Masala 12: `trim` metodi bilan bo'sh joylarni olib tashlash:</span><br> Berilgan stringning boshida va oxirida bo'sh joylarni olib tashlovchi funksiyani yozing.
                     </h3>
                     <input id="inputNum12" type="text" required placeholder="Matnni kiriting:">
                     <div class="result_text">
